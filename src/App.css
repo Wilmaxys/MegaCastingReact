@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/font/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'RobotoBold';
+  src: url('./assets/font/Roboto-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'RobotoMedium';
+  src: url('./assets/font/Roboto-Medium.ttf');
+}
+
+
+.App{
+  font-family: 'Roboto', 'verdana';
+}
