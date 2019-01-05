@@ -1,14 +1,31 @@
 import React from 'react';
+import {
+    Highlight
+} from 'react-instantsearch-dom';
+import { NavLink } from 'react-router-dom';
+import Box from '../Box/Box';
+
 
 import './Offer.css';
 
-const offer = (props) => (
-    <article className="Offer" onClick={props.clicked}>
-        <h1>{props.title}</h1>
-        <div className="Info">
-            <div className="Author">{props.author}</div>
-        </div>
-    </article>
-);
-
-export default offer;
+export const Offer = ({hit}) => {
+    return(
+        <Box color="red" className="d-flex flex-column">
+            <Highlight
+                attribute="PRO_NAME"
+                hit={hit}
+            />
+            <Highlight
+                attribute="CTC_EMAIL"
+                hit={hit}
+            />
+            <Highlight
+                attribute="MET_LIBELLE"
+                hit={hit}
+            />
+            <Highlight
+                attribute="LOC_LIBELLE"
+                hit={hit}
+            />
+        </Box>
+    )};
