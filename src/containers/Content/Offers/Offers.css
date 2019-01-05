@@ -8,6 +8,10 @@
   padding: 20px 0px;
 }
 
-.Refine:first-child{
+.refined{
   background-color: red !important;
+}
+
+.elementRefine {
+  color: blue !important;
 }

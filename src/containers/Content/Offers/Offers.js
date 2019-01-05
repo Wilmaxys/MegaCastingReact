@@ -3,6 +3,7 @@ import {
     InstantSearch,
     SearchBox,
     connectRefinementList,
+    RefinementList,
     Configure
 } from 'react-instantsearch-dom';
 import InfiniteHits from '../../../components/InfiniteHits/InfiniteHits';
@@ -18,20 +19,25 @@ import Box from '../../../components/Box/Box';
 import './Offers.css';
 
 const MyRefinementList = connectRefinementList((props) => {
-    
-    // debugger;
+    console.log(props);
 
-
-    // let styleRefine = null;
-
-    // if(props.length != 0 && props.length != undefined){
-    //     if(props.items[0].isRefined == true){
-    //         styleRefine = props.className;
-    //     }
-    // }
-
-    return (props.items.map(({ label }) => (
-        <div className={props.className} onClick={() => { props.refine([label]) }}>{label}</div>
+    return (props.items.map(({ label, count, isRefined }) => (
+        <div className={isRefined ? 'refined' : null} onClick={() => {
+            if(isRefined){
+                const index = props.currentRefinement.findIndex((refinement) => { return (refinement === label) });
+                let tempArray = [...props.currentRefinement]
+                tempArray.splice(index, 1);
+                if(tempArray.length == 0){
+                    props.refine('');
+                }
+                else{
+                    props.refine(tempArray);
+                }
+            }
+            else{
+                props.refine([...props.currentRefinement, label]) 
+            }
+        }}>{label} {count}</div>
     )))
 });
 
@@ -84,10 +90,10 @@ class Offers extends Component {
                     <div className="row">
                         <div className="col-md-3 col-12 searchColumn">
                             <Box color="white" className="d-flex flex-column">
-                                <MyRefinementList attribute="MET_LIBELLE" className="Refine" />
+                                <MyRefinementList attribute="MET_LIBELLE"/>
                             </Box>
                             <Box color="white" className="d-flex flex-column">
-                                <MyRefinementList attribute="LOC_LIBELLE" className="Refine" />
+                                <MyRefinementList attribute="LOC_LIBELLE"/>
                             </Box>
                         </div>
                         <div className="col-md-9 col-12">
