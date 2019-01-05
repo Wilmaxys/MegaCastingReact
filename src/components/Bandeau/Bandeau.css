@@ -1,4 +1,6 @@
 .Bandeau{
   padding: 50px 0px;
+}
+.Bandeau .textBandeau{
   text-align: center;
 }

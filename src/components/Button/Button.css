@@ -1,0 +1,20 @@
+.asideButton{
+  padding: 5px !important;
+  font-family: 'RobotoMedium', 'verdana';
+  background-color: #00BBFF;
+  margin: 10px 2px;
+  display: block;
+  color: white !important;
+  text-align: center;
+  -webkit-transition: background-color .2s ease-in;
+  -moz-transition: background-color .2s ease-in;
+  -o-transition: background-color .2s ease-in;
+  transition: background-color .2s ease-in;
+  font-style: none !important;
+}
+
+.asideButton:hover{
+  background-color: #AFE9FF;
+  text-decoration: none !important;
+}
+

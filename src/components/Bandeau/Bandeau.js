@@ -10,7 +10,9 @@ const bandeau = (props) => {
   return (
     <div className="Bandeau" style={style}>
       <div className="container">
-        {props.children}
+        <div className="textBandeau">
+          {props.children}
+        </div>
       </div>
     </div>
 )};

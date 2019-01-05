@@ -8,7 +8,7 @@ import Aux from '../../hoc/AuxJs';
 
 const navbar = (props) => {
   
-  let menuLogo = <Aux><div className="image"><img src={logo} /></div></Aux>;
+  let menuLogo = <Aux><div className="image"><img src={logo} alt="img" /></div></Aux>;
 
   let openMenu = <Aux> <div className="logoNav">{menuLogo}</div>
     <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="30" width="30" viewBox="0 0 40 40" ><g>

@@ -1,10 +1,8 @@
-.barre{
+.barreTitle{
   height: 5px;
-  background: linear-gradient(to right, #AFE9FF, #00BBFF, #00BBFF, #00BBFF, #00BBFF, #00BBFF, #AFE9FF);
 }
 
 .titre{
-  text-align: center;
   font-size:20px;
   font-family: 'RobotoMedium', 'verdana';
 }

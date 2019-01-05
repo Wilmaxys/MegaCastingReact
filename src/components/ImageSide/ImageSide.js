@@ -10,7 +10,7 @@ const imageSide = (props) => {
           {props.children}
         </div>
         <div className="col-12 col-md-4 image">
-          <img className="img-fluid" src={props.image} />
+          <img className="img-fluid" src={props.image} alt="img" />
         </div>
       </div>
     </div>
