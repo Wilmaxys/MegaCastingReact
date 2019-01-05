@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import {
     InstantSearch,
-    Hits,
     SearchBox,
     connectRefinementList,
     Configure
 } from 'react-instantsearch-dom';
 import InfiniteHits from '../../../components/InfiniteHits/InfiniteHits';
 import { Offer } from '../../../components/Offer/Offer';
+import Box from '../../../components/Box/Box';
 
 
 // import axios from '../../../axios';
@@ -18,8 +18,20 @@ import { Offer } from '../../../components/Offer/Offer';
 import './Offers.css';
 
 const MyRefinementList = connectRefinementList((props) => {
-    return (props.items.map(({label}) => (
-        <div onClick={() => {props.refine([label])}}>{label}</div>
+    
+    // debugger;
+
+
+    // let styleRefine = null;
+
+    // if(props.length != 0 && props.length != undefined){
+    //     if(props.items[0].isRefined == true){
+    //         styleRefine = props.className;
+    //     }
+    // }
+
+    return (props.items.map(({ label }) => (
+        <div className={props.className} onClick={() => { props.refine([label]) }}>{label}</div>
     )))
 });
 
@@ -59,25 +71,35 @@ class Offers extends Component {
     render() {
 
         return (
-        <InstantSearch
-            appId="9FGBZNOUZ3"
-            apiKey="92286c5a9399bf30ccceb915cd308ad6"
-            indexName="offreCastingsFormated"
-        >
-            <div className="container">
+            <InstantSearch
+                appId="9FGBZNOUZ3"
+                apiKey="92286c5a9399bf30ccceb915cd308ad6"
+                indexName="offreCastingsFormated"
+            >
+                <div className="container">
                     <SearchBox />
-                    <MyRefinementList attribute="MET_LIBELLE" />
 
-                    <Configure hitsPerPage={6} />
+                    <Configure hitsPerPage={12} />
 
-
-                    <InfiniteHits minHitsPerPage={6} hitComponent={Offer}/>
+                    <div className="row">
+                        <div className="col-md-3 col-12 searchColumn">
+                            <Box color="white" className="d-flex flex-column">
+                                <MyRefinementList attribute="MET_LIBELLE" className="Refine" />
+                            </Box>
+                            <Box color="white" className="d-flex flex-column">
+                                <MyRefinementList attribute="LOC_LIBELLE" className="Refine" />
+                            </Box>
+                        </div>
+                        <div className="col-md-9 col-12">
+                            <InfiniteHits minHitsPerPage={6} hitComponent={Offer} />
+                        </div>
+                    </div>
 
                 </div>
             </InstantSearch>
         );
 
-        /*let posts = <p style={{ textAlign: 'center' }}>Something went wrong!</p>;
+        /* let posts = <p style={{ textAlign: 'center' }}>Something went wrong!</p>;
         if ( !this.state.error ) {
             posts = this.state.posts.map( post => {
                 return (

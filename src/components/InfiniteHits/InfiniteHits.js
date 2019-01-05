@@ -46,7 +46,7 @@ class InfiniteHits extends Component {
     return (
       <div className="ais-InfiniteHits">
         <ul className="ais-InfiniteHits-list">
-          <UniformGrid list={list} />
+          <UniformGrid size="6" list={list} />
           <li
             className="ais-InfiniteHits-sentinel"
             ref={c => (this.sentinel = c)}

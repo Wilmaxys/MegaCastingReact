@@ -51,7 +51,7 @@ class Home extends Component {
             Skype c'est chiant
           </Title>
           Ceci est un test
-          <UniformGrid list={elements}></UniformGrid>
+          <UniformGrid size="4" list={elements}></UniformGrid>
         </Bandeau>
 
         <div className="container">
