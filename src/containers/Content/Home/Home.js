@@ -81,7 +81,7 @@ class Home extends Component {
               Proposer vos offres
             </Title>
             <div>Vous êtes à la recherche de nouveau talent ? Proposer vos offres de casting en contactant notre équipe.</div>
-            <Button to="/contact/" />
+            <Button to="/contact/" >Contact</Button>
           </Box>
         </div>
       </div>

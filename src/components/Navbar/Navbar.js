@@ -18,18 +18,18 @@ const navbar = (props) => {
   return ( <ResponsiveMenu
     menuOpenButton={openMenu}
     menuCloseButton={openMenu}
-    changeMenuOn="500px"
+    changeMenuOn="770px"
     largeMenuClassName="large-menu-classname"
     smallMenuClassName="small-menu-classname"
     menu={
 
       <div className="container">
         <div className="row navbar">
-          <div className="col-12 col-md-6 logo">
+          <div className="col-12 col-md-4 logo">
             <div className="text">MegaCasting</div>
             {menuLogo}
           </div>
-          <div className="col-12 col-md-6 menu">
+          <div className="col-12 col-md-8 menu">
             <div className="menuButton">
               <NavLink
                 to="/"

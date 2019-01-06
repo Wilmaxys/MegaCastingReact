@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Box from '../../../components/Box/Box';
 import Title from '../../../components/Title/Title';
-import Button from '../../../components/Button/Button';
 
 class Advices extends Component {
 
