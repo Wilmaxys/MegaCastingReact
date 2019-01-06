@@ -3,8 +3,16 @@ import { NavLink } from 'react-router-dom';
 
 import './Button.css';
 
+
 const button = (props) => {
-  return (<NavLink className="asideButton col-md-2" to={props.to}>LEARN MORE</NavLink>);
+
+  let text = "LEARN MORE";
+
+  if(props.children !== undefined && props.children !== undefined){
+    text = props.children;
+  }
+
+  return (<NavLink className="asideButton col-md-2" to={props.to}>{text}</NavLink>);
 }
 
 export default button;

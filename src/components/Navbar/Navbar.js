@@ -37,12 +37,19 @@ const navbar = (props) => {
                 activeClassName="active">
                 Home</NavLink>
             </div>
-            <div className="menuButton specialButton">
+            <div className="menuButton">
               <NavLink
-                to="/posts/"
+                to="/advices/"
                 exact
                 activeClassName="active">
-                Posts</NavLink>
+                Conseils</NavLink>
+            </div>
+            <div className="menuButton specialButton">
+              <NavLink
+                to="/offers/"
+                exact
+                activeClassName="active">
+                Offres</NavLink>
             </div>
           </div>
         </div>

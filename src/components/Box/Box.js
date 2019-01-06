@@ -5,7 +5,8 @@ import './Box.css';
 const box = (props) => {
   let style = {
     backgroundColor: props.color,
-    color: props.textColor
+    color: props.textColor,
+    textAlign: props.align
   }
 
   let className = "Box col-12 " + props.className;

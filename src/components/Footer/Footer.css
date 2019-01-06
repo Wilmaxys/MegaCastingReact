@@ -18,7 +18,8 @@
 }
 
 .Footer .logo{
-  display: flex; /* contexte sur le parent */
   padding: 0 !important;
   text-align: center;
+  display: inline-block;
+  margin: 0 auto;
 }

@@ -3,7 +3,6 @@ import {
     InstantSearch,
     SearchBox,
     connectRefinementList,
-    RefinementList,
     Configure
 } from 'react-instantsearch-dom';
 import InfiniteHits from '../../../components/InfiniteHits/InfiniteHits';
@@ -22,12 +21,12 @@ const MyRefinementList = connectRefinementList((props) => {
     console.log(props);
 
     return (props.items.map(({ label, count, isRefined }) => (
-        <div className={isRefined ? 'refined' : null} onClick={() => {
+        <div className="elementRefine"><span className={isRefined ? 'refined' : null} onClick={() => {
             if(isRefined){
                 const index = props.currentRefinement.findIndex((refinement) => { return (refinement === label) });
                 let tempArray = [...props.currentRefinement]
                 tempArray.splice(index, 1);
-                if(tempArray.length == 0){
+                if(tempArray.length === 0){
                     props.refine('');
                 }
                 else{
@@ -37,7 +36,7 @@ const MyRefinementList = connectRefinementList((props) => {
             else{
                 props.refine([...props.currentRefinement, label]) 
             }
-        }}>{label} {count}</div>
+        }}>{label}  <span className="count">{count}</span></span></div>
     )))
 });
 
@@ -76,6 +75,11 @@ class Offers extends Component {
 
     render() {
 
+        let styleTitle = {
+            fontWeight: 'bold',
+            margin: '10px 0px'
+        }
+
         return (
             <InstantSearch
                 appId="9FGBZNOUZ3"
@@ -83,16 +87,18 @@ class Offers extends Component {
                 indexName="offreCastingsFormated"
             >
                 <div className="container">
-                    <SearchBox />
+                    <SearchBox/>
 
                     <Configure hitsPerPage={12} />
 
                     <div className="row">
                         <div className="col-md-3 col-12 searchColumn">
                             <Box color="white" className="d-flex flex-column">
+                                <span style={styleTitle}>Métier</span>
                                 <MyRefinementList attribute="MET_LIBELLE"/>
                             </Box>
                             <Box color="white" className="d-flex flex-column">
+                                <span style={styleTitle}>Localisation</span>
                                 <MyRefinementList attribute="LOC_LIBELLE"/>
                             </Box>
                         </div>
