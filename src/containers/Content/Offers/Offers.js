@@ -8,6 +8,7 @@ import {
 import InfiniteHits from '../../../components/InfiniteHits/InfiniteHits';
 import { Offer } from '../../../components/Offer/Offer';
 import Box from '../../../components/Box/Box';
+import Title from '../../../components/Title/Title';
 
 
 // import axios from '../../../axios';
@@ -93,6 +94,9 @@ class Offers extends Component {
 
                     <div className="row">
                         <div className="col-md-3 col-12 searchColumn">
+                            <Title align="left" color="#1F3040" fade="#1F3040">
+                            Filtres
+                            </Title>
                             <Box color="white" className="d-flex flex-column">
                                 <span style={styleTitle}>Métier</span>
                                 <MyRefinementList attribute="MET_LIBELLE"/>
@@ -103,6 +107,12 @@ class Offers extends Component {
                             </Box>
                         </div>
                         <div className="col-md-9 col-12">
+                        <Box color="white" className="d-flex flex-column">
+                            <Title align="left" color="#1F3040" fade="#1F3040">
+                                Offres
+                            </Title>    
+                        </Box>
+        
                             <InfiniteHits minHitsPerPage={6} hitComponent={Offer} />
                         </div>
                     </div>

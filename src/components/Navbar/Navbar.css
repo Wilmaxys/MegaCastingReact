@@ -53,6 +53,7 @@ div[role="button"] {
   .navbar .specialButton{
     border: 1px solid;
     border-color: #00BBFF;
+    margin-left: 15px;
   }
 }
 

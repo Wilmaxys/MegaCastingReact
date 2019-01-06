@@ -8,6 +8,7 @@ import Advices from './Advices/Advices';
 import Actor from '../../components/Advice/Actor/Actor';
 import Casting from '../../components/Advice/Casting/Casting';
 import Figurant from '../../components/Advice/Figurant/Figurant';
+import Contact from './Contact/Contact';
 
 class Content extends Component {
     state = {
@@ -17,6 +18,7 @@ class Content extends Component {
     render () {
         return (
             <Switch>
+                <Route path="/contact" exact component={Contact} />
                 <Route path="/advices/figurant" exact component={Figurant} />
                 <Route path="/advices/casting" exact component={Casting} />
                 <Route path="/advices/actor" exact component={Actor} />

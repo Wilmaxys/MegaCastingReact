@@ -43,7 +43,7 @@ class Home extends Component {
             dans une pub, passer une audition de danse notre site est fait pour vous. Postulez aux castings rémunérés et professionnels
             ouverts aux debutants comme aux confirmés-Casting, audition, offres d'emploi artistiques pour figurants et pleins d'autres offres.
           </div>
-          <Button to="/posts/" />
+          <Button to="/offers/" >Rechercher</Button>
         </ImageSide>
         <Bandeau color="#AFE9FF">
           <Title align="center" color="#00BBFF" fade="#AFE9FF">
@@ -81,7 +81,7 @@ class Home extends Component {
               Proposer vos offres
             </Title>
             <div>Vous êtes à la recherche de nouveau talent ? Proposer vos offres de casting en contactant notre équipe.</div>
-            <Button to="/posts/" />
+            <Button to="/contact/" />
           </Box>
         </div>
       </div>
