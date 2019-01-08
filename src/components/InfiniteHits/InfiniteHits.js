@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connectInfiniteHits } from 'react-instantsearch-dom';
 import PropTypes from 'prop-types';
 import UniformGrid from '../UniformGrid/UniformGrid';
-import IntersectionObserver from 'intersection-observer';
+import 'intersection-observer';
 
 import './InfiniteHits.css';
 
