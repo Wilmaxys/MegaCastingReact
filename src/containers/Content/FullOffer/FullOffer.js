@@ -10,21 +10,25 @@ class FullPost extends Component {
     }
 
     componentDidMount () {
-        console.log(this.props);
+        console.log("Did mount");
         this.loadData();
     }
 
     componentDidUpdate() {
+        console.log("Did update");
         this.loadData();
     }
 
     loadData () {
+
+        console.log("loadData");
         const { loadedPost } = this.state;
         const { match } = this.props;
         
+        
 
         if ( match.params.id ) {
-            if ( !loadedPost || (loadedPost && loadedPost.id !== +match.params.id) ) {
+            if ( !loadedPost || (loadedPost && loadedPost.objectID !== +match.params.id) ) {
                 axios.get( '/offreCastings/' + match.params.id )
                     .then( response => {
                         this.setState( { loadedPost: response.data } );
@@ -34,13 +38,14 @@ class FullPost extends Component {
     }
 
     render () {
+
+        console.log("render");
+
         let post = <p style={{ textAlign: 'center' }}>Please select a Post!</p>;
         if ( this.props.match.params.id ) {
             post = <p style={{ textAlign: 'center' }}>Loading...!</p>;
         }
-
-        debugger;
-
+        
         if ( this.state.loadedPost ) {
             post = (
                 <div className="FullOffer">
