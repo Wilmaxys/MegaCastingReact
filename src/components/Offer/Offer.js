@@ -43,6 +43,6 @@ export const Offer = ({hit}) => {
                 attribute="DOM_LIBELLE"
                 hit={hit}
             /></span>
-            <NavLink to={`/offers/${hit.CAST_ID}`}>Voir plus...</NavLink>
+            <NavLink to={`/offers/${hit.objectID}`}>Voir plus...</NavLink>
         </Box>
     )};
