@@ -60,8 +60,7 @@ class Offers extends Component {
                                 Offres
                             </Title>    
                         </Box>
-        
-                            <InfiniteHits minHitsPerPage={6} hitComponent={Offer} />
+                            <InfiniteHits minHitsPerPage={12} hitComponent={Offer} />
                         </div>
                     </div>
 
