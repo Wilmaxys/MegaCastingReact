@@ -26,7 +26,6 @@ class FullPost extends Component {
         const { loadedPost } = this.state;
         const { match } = this.props;
         
-        
 
         if ( match.params.id ) {
             if ( !loadedPost || (loadedPost && loadedPost.objectID !== +match.params.id) ) {

@@ -42,7 +42,7 @@ const navbar = (props) => {
                 to="/advices/"
                 exact
                 activeClassName="active">
-                Conseils</NavLink>
+                Contenu éditorial</NavLink>
             </div>
             <div className="menuButton">
               <NavLink
