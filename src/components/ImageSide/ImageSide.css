@@ -1,0 +1,14 @@
+.imageSide{
+  padding: 50px 0px;
+}
+
+.imageSide .image{
+  margin: 20px 0px;
+}
+
+.imageSide img{
+  border: 5px solid white;
+  box-shadow: 0px 0px 30px -20px grey;
+  transform: rotate(10deg);
+  
+}

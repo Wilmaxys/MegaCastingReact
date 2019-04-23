@@ -1,0 +1,25 @@
+.Footer{
+  margin-top: 50px;
+  color: white;
+}
+
+.Footer .logo .text{
+  display: inline-block;
+  margin: auto 0;
+  font-size:25px;
+  font-family: 'RobotoMedium', 'verdana';
+}
+
+.Footer .logo .image{
+  display: inline-block;
+  vertical-align: top;
+  margin: auto 0;
+  padding-left: 5px;
+}
+
+.Footer .logo{
+  padding: 0 !important;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+}
