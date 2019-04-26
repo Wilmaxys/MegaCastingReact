@@ -15,11 +15,6 @@ class FullPost extends Component {
         this.loadData();
     }
 
-    componentDidUpdate() {
-        console.log("Did update");
-        this.loadData();
-    }
-
     loadData () {
 
         console.log("loadData");
@@ -28,10 +23,10 @@ class FullPost extends Component {
         
 
         if ( match.params.id ) {
-            if ( !loadedPost || (loadedPost && loadedPost.objectID !== +match.params.id) ) {
-                axios.get( '/offreCastings/' + match.params.id )
+            if ( !loadedPost || (loadedPost && loadedPost.cast_id !== +match.params.id) ) {
+                axios.get( '/offre/public/' + match.params.id , { headers:  { 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6IkpHcmF5IiwiaWQiOiI1MiIsImlhdCI6MTU0NzAzMjY5MiwiZXhwIjoxNTQ3MDc1ODkyfQ._6CsUUIznN5BflzT7nrVvye34FMzNvpNgLd10Aw0iUE' } } )
                     .then( response => {
-                        this.setState( { loadedPost: response.data } );
+                        this.setState( { loadedPost: response.data.offre } );
                     } );
             }
         }
@@ -51,7 +46,7 @@ class FullPost extends Component {
             <div className="container">
                 <Box color="#1F3040" textColor="white">
                     <Title align="left" color="#AFE9FF" fade="#AFE9FF">
-                        {this.state.loadedPost.CAST_INTITULE} - {this.state.loadedPost.CAST_REFERENCE}
+                        {this.state.loadedPost.cast_intitule} - {this.state.loadedPost.CAST_REFERENCE}
                     </Title>
                     <div>
                         <b>Nom du demandeur :</b> {this.state.loadedPost.PRO_NAME}                    
@@ -102,6 +97,7 @@ class FullPost extends Component {
             </div>
             );
         }
+
         return post;
     }
 }
