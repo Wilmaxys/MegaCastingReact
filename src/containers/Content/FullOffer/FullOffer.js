@@ -46,52 +46,46 @@ class FullPost extends Component {
             <div className="container">
                 <Box color="#1F3040" textColor="white">
                     <Title align="left" color="#AFE9FF" fade="#AFE9FF">
-                        {this.state.loadedPost.cast_intitule} - {this.state.loadedPost.CAST_REFERENCE}
+                        {this.state.loadedPost.cast_intitule} - {this.state.loadedPost.cast_reference}
                     </Title>
                     <div>
-                        <b>Nom du demandeur :</b> {this.state.loadedPost.PRO_NAME}                    
+                        <b>Nom du demandeur :</b> {this.state.loadedPost.prospect.pro_name}                    
                     </div>
                     <div>
-                        <b>Numéro de téléphone :</b> {this.state.loadedPost.CTC_NUM_TEL}                    
+                        <b>Numéro de téléphone :</b> {this.state.loadedPost.prospect.pro_num_tel}                    
                     </div>
                     <div>
-                        <b>Numéro de fax :</b> {this.state.loadedPost.CTC_NUM_FAX}                    
+                        <b>Numéro de fax :</b> {this.state.loadedPost.prospect.pro_num_fax}                    
                     </div>
                     <div>
-                        <b>Email :</b> {this.state.loadedPost.CTC_EMAIL}                    
+                        <b>Email :</b> {this.state.loadedPost.prospect.pro_email}                    
                     </div>
                     <div>
-                        <b>Métier :</b> {this.state.loadedPost.MET_LIBELLE}                    
+                        <b>Métier :</b> {this.state.loadedPost.metier.met_libelle}                    
                     </div>
                     <div>
-                        <b>Domaine :</b> {this.state.loadedPost.DOM_LIBELLE}                    
+                        <b>Domaine :</b> {this.state.loadedPost.metier.domaine.dom_libelle}                    
                     </div>
                     <div>
-                        <b>Localisation :</b> {this.state.loadedPost.LOC_LIBELLE}                    
+                        <b>Localisation :</b> {this.state.loadedPost.localisation.loc_libelle}                    
                     </div>
                     <div>
-                        <b>Contrat :</b> {this.state.loadedPost.CON_LIBELLE}                    
+                        <b>Contrat :</b> {this.state.loadedPost.contrat.con_libelle}                    
                     </div>
                     <div>
-                        <b>Description du poste :</b> {this.state.loadedPost.CAST_DESCRIPTION_POSTE}                    
+                        <b>Description du poste :</b> {this.state.loadedPost.cast_description_poste}                    
                     </div>
                     <div>
-                        <b>Description du profil :</b> {this.state.loadedPost.CAST_DESCRIPTION_PROFIL}                    
+                        <b>Description du profil :</b> {this.state.loadedPost.cast_description_profil}                    
                     </div>
                     <div>
-                        <b>Description du profil :</b> {this.state.loadedPost.CAST_DESCRIPTION_PROFIL}                    
+                        <b>Date de début publication :</b> {this.state.loadedPost.cast_date_debut_publication}                    
                     </div>
                     <div>
-                        <b>Description du profil :</b> {this.state.loadedPost.CAST_DESCRIPTION_PROFIL}                    
+                        <b>Date de début de contrat :</b> {this.state.loadedPost.cast_date_debut_contrat}                    
                     </div>
                     <div>
-                        <b>Date de début publication :</b> {this.state.loadedPost.CAST_DATE_DEBUT_PUBLICATION}                    
-                    </div>
-                    <div>
-                        <b>Date de début de contrat :</b> {this.state.loadedPost.CAST_DATE_DEBUT_CONTRAT}                    
-                    </div>
-                    <div>
-                        <b>Durée :</b> {this.state.loadedPost.CAST_DUREE_DIFFUSION} jours                    
+                        <b>Durée :</b> {this.state.loadedPost.cast_duree_diffusion} jours                    
                     </div>
                 </Box>
             </div>
