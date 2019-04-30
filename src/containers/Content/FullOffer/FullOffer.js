@@ -79,7 +79,7 @@ class FullPost extends Component {
                         <b>Description du profil :</b> {this.state.loadedPost.cast_description_profil}                    
                     </div>
                     <div>
-                        <b>Date de début publication :</b> {this.state.loadedPost.cast_date_debut_publication}                    
+                        <b>Date de publication :</b> {this.state.loadedPost.cast_date_debut_publication}                    
                     </div>
                     <div>
                         <b>Date de début de contrat :</b> {this.state.loadedPost.cast_date_debut_contrat}                    
